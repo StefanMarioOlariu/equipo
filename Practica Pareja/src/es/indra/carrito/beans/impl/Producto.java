@@ -96,11 +96,7 @@ public class Producto{
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
-	@Override
-	public String toString() {
-		return "Producto [nombre=" + nombre + ", descripcion=" + descripcion + ", categoria=" + categoria + ", precio="
-				+ precio + ", cantidad=" + cantidad + "]";
-	}
+	
 	
 	public Producto aumentarCantidad(Producto p,int cantidad) {
 		Producto producto = p;
@@ -109,6 +105,14 @@ public class Producto{
 		return producto;
 	}
 	
+	
+	public String toStringCompleto() {
+		return "Producto [nombre=" + nombre + ", descripcion=" + descripcion + ", categoria=" + categoria + ", precio="
+				+ precio + ", cantidad=" + cantidad + "]";
+	}
+	public String toString() {
+		return nombre + ";" + precio;
+	}
 	public Producto disminuirCantidad(Producto p,int cantidad) {
 		Producto producto = p;
 		producto.setCantidad(producto.getCantidad()-cantidad);

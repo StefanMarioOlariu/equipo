@@ -78,13 +78,19 @@ public class Cliente {
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
-	@Override
-	public String toString() {
-		return nombre + ";" + apellido;
-	}
+	
 	
 	public void comparProductos(ArrayList<Producto> productos, ArrayList<Integer> cantidad){
 		
+	}
+	
+	public String toStringCompleto() {
+		return "Cliente [nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", telefono="
+				+ telefono + "]";
+	}
+	@Override
+	public String toString() {
+		return nombre + ";" + apellido;
 	}
 	
 }
